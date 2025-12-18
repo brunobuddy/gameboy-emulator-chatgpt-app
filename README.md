@@ -1,1 +1,1 @@
-# gameboy-emulator-chatgpt-app
+# Gameboy Emulator ChatGPT App
