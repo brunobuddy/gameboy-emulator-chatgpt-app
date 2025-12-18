@@ -1,37 +1,86 @@
 <p align="center">
-  <img src="logo.png" alt="GameBoy Emulator ChatGPT" width="200"/>
+  <img src="assets/logo.png" alt="GameBoy Emulator ChatGPT" width="200"/>
 </p>
 
-<h1 align="center">GameBoy Emulator for ChatGPT</h1>
+<h1 align="center">Game Boy Emulator for ChatGPT</h1>
 
 <p align="center">
-  <strong>Play classic GameBoy games directly in your ChatGPT conversations</strong>
+  <strong>Play classic Game Boy games directly in your ChatGPT conversations</strong>
 </p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#controls">Controls</a> •
-  <a href="#tech-stack">Tech Stack</a>
+  <code>https://gameboy.manifest.build/mcp</code>
 </p>
 
 ---
 
-A GameBoy emulator integration for ChatGPT, built as a **Model Context Protocol (MCP)** server. Upload and play GameBoy ROM files directly within ChatGPT conversations.
+## Use it in ChatGPT
 
-> Built with [Gameboy.js](https://github.com/juchi/gameboy.js/) and [CSS Gameboy](https://github.com/attackemartin/css-gameboy).
+1. Click on your name, then **Settings** → **Apps** → **Advanced settings** and enable developer mode
+2. Go back, click **Create an app**, name it "GameBoy", paste the MCP server URL above, select "No auth" and check the box
+3. Start a new chat with `@GameBoy`, attach your ROM file (`.gb`, `.gbc`) and play!
+
+This fun experiment was made by the [Manifest](https://manifest.build) team — reach out if you'd like your app in ChatGPT too.
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/tetris.png" alt="Tetris gameplay" width="500"/>
+</p>
+
+<p align="center">
+  <img src="assets/zelda.png" alt="Zelda gameplay" width="500"/>
+</p>
+
+---
+
+## Controls
+
+<table align="center">
+  <tr>
+    <th>Key</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td align="center"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></td>
+    <td>D-Pad</td>
+  </tr>
+  <tr>
+    <td align="center"><kbd>G</kbd></td>
+    <td>A Button</td>
+  </tr>
+  <tr>
+    <td align="center"><kbd>B</kbd></td>
+    <td>B Button</td>
+  </tr>
+  <tr>
+    <td align="center"><kbd>H</kbd></td>
+    <td>START</td>
+  </tr>
+  <tr>
+    <td align="center"><kbd>N</kbd></td>
+    <td>SELECT</td>
+  </tr>
+</table>
+
+---
+
+## Disclaimer
+
+> **Note:** This emulator does not include any games. You must provide your own ROM files. Please only use ROM files for games you legally own. Support game developers by purchasing official releases.
 
 ---
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| **Browser-based Emulator** | Full GameBoy emulation embedded directly in ChatGPT |
-| **ROM Support** | Upload `.gb` and `.gbc` ROM files |
-| **Keyboard Controls** | Play using intuitive keyboard mappings |
-| **Session Management** | State persists across your conversation |
+| Feature                    | Description                                          |
+| -------------------------- | ---------------------------------------------------- |
+| **Browser-based Emulator** | Full Game Boy emulation embedded directly in ChatGPT |
+| **ROM Support**            | Upload `.gb` and `.gbc` ROM files                    |
+| **Keyboard Controls**      | Play using intuitive keyboard mappings               |
+| **Session Management**     | State persists across your conversation              |
 
 ---
 
@@ -70,37 +119,6 @@ PORT=8080 npm start
 
 ---
 
-## Controls
-
-<table align="center">
-  <tr>
-    <th>Key</th>
-    <th>Action</th>
-  </tr>
-  <tr>
-    <td align="center"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></td>
-    <td>D-Pad</td>
-  </tr>
-  <tr>
-    <td align="center"><kbd>G</kbd></td>
-    <td>A Button</td>
-  </tr>
-  <tr>
-    <td align="center"><kbd>B</kbd></td>
-    <td>B Button</td>
-  </tr>
-  <tr>
-    <td align="center"><kbd>H</kbd></td>
-    <td>START</td>
-  </tr>
-  <tr>
-    <td align="center"><kbd>N</kbd></td>
-    <td>SELECT</td>
-  </tr>
-</table>
-
----
-
 ## Tech Stack
 
 <table>
@@ -116,38 +134,11 @@ PORT=8080 npm start
 
 ---
 
-## Project Structure
+## Credits
 
-```
-gameboy/
-├── src/
-│   ├── server.ts                    # Main MCP HTTP server
-│   ├── extensions/
-│   │   └── gameboy.extension.ts     # Tool registration
-│   └── web/gameboy-player/
-│       ├── gameboy-player.html      # UI template
-│       ├── gameboy-player.ts        # Frontend logic
-│       └── *.css                    # Styling
-├── scripts/
-│   └── build-web.ts                 # Vite build script
-└── dist/                            # Compiled output
-```
+Built with [GameBoy.js](https://github.com/juchi/gameboy.js/) and [CSS GameBoy](https://github.com/attackemartin/css-gameboy).
 
 ---
-
-## API Endpoints
-
-| Method | Path | Description |
-|--------|------|-------------|
-| `POST` | `/mcp` | MCP protocol handler |
-| `GET` | `/mcp` | SSE stream for bidirectional communication |
-| `DELETE` | `/mcp` | Session cleanup |
-
----
-
-<p align="center">
-  <sub>Made with ❤️ for retro gaming enthusiasts</sub>
-</p>
 
 ## License
 
