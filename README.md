@@ -9,6 +9,13 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"/>
+  <img src="https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/MCP-Server-green" alt="MCP Server"/>
+  <img src="https://img.shields.io/badge/ChatGPT-Ready-74aa9c?logo=openai&logoColor=white" alt="ChatGPT Ready"/>
+</p>
+
+<p align="center">
   <code>https://gameboy.manifest.build/mcp</code>
 </p>
 
