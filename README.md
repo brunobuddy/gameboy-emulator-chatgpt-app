@@ -24,7 +24,7 @@
 ## Use it in ChatGPT
 
 1. Click on your name, then **Settings** → **Apps** → **Advanced settings** and enable developer mode
-2. Go back, click **Create an app**, name it "GameBoy", paste the MCP server URL above, select "No auth" and check the box
+2. Go back, click **Create an app**, name it "GameBoy", paste the MCP server URL `https://gameboy.manifest.build/mcp`, select "No auth" and check the box
 3. Start a new chat with `@GameBoy`, attach your ROM file (`.gb`, `.gbc`) and play!
 
 This fun experiment was made by the [Manifest](https://manifest.build) team — reach out if you'd like your app in ChatGPT too.
